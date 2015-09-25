@@ -1,0 +1,81 @@
+/* use this to put borders around things... */
+.thin_border{
+	border: 1px solid black;
+}
+body {
+	background: gray;
+	color: yellow;
+	}
+a {
+	
+	color: yellow;
+	text-decoration: none; /* Quita la rayita azul por defecto que viene debajo del link */
+	}
+a:hover {
+	
+	background: blue;
+	color: gray;
+	}
+p {
+	font-size: 20px;
+	font-family: sans-serif;
+	
+	}
+	
+.margen{
+	
+	margin-left:200px;
+	}
+	
+.otrolink{
+	background: blue;
+	color: red;
+	
+	}
+
+	
+	
+@media (min-width:500px){
+	.responsive {
+	display: inline-block;
+	width: 300px;
+	border: 1px solid black;
+	background: blue;
+	}
+	
+	}
+	
+@media (min-width:1000px){
+	.responsive {
+	display: inline-block;
+	width: 500px;
+	border: 1px solid black;
+	background: green;
+	}
+	
+	}
+	
+	div {
+	font-size: 20px;
+	font-family:serif;	
+	background-color:#cc0000;
+	height:50px;
+	width:200px;
+	}
+	
+	
+td {
+    border: 2px dashed blue;
+    height: 50px;
+}
+table {
+    border: 1px solid black;
+}
+
+	img {
+	font-size: 18px;
+	font-family:Garamond, serif;	
+    border: 3px solid #4682b4;
+	height:200px;
+	width:300px;
+	}
