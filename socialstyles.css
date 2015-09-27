@@ -3,8 +3,8 @@
 	border: 1px solid black;
 }
 body {
-	background: gray;
-	color: yellow;
+	background: #c9691c;
+	color: #f5b529;
 	}
 a {
 	
@@ -32,8 +32,19 @@ p {
 	color: red;
 	
 	}
+/* Como anidar los selectors si quiero solo aplicar el estilo a un parrafo dentro*/
+/*de dos div seria div div p {  } 
+div div p {
+     
 
+	}
+	 */
 	
+/* Este estilo de borde punteado aplicaria a todos los elementos HTML ya que asi lo denota el asterisco
+* {
+    border: 1px dashed #3A5FCD;
+}
+*/	
 	
 @media (min-width:500px){
 	.responsive {
@@ -75,7 +86,7 @@ table {
 	img {
 	font-size: 18px;
 	font-family:Garamond, serif;	
-    border: 3px solid #4682b4;
+    border: 3px solid #904d06;
 	height:200px;
 	width:300px;
 	}
