@@ -1,0 +1,15 @@
+/*Add your CSS below!*/
+p {
+	font-family: Garamond;
+	
+	}
+body> p { 
+    font-weight: bold;
+    }
+#sino{
+	color:#7AC5CD;
+}
+ul p { 
+    text-decoration: underline;
+    color: #000000;
+    }
