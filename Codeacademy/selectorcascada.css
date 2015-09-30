@@ -25,3 +25,45 @@ li p {
 	font-size: 20px;
 	color: #000000;
 }
+
+/* a:link An unvisited link */
+
+a:link {
+	color:#008B45;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+/* a:visited An visited link */
+a:visited {
+	color:red;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+
+
+/* p:first-child se le aplica el atributo solo al primero de los paragrafos" */
+
+p:first-child {
+    color: red;
+    font-family: Cursive;
+}
+/* p:nth-child se le aplica el atributo solo al paragrafo (n) " */
+
+p:first-child {
+    color: red;
+    font-family: Cursive;
+}
+p:nth-child(2) {
+    font-family: Tahoma;
+}
+p:nth-child(3) {
+    color: #CC0000 ;
+}
+p:nth-child(4) {
+    background-color:  #00FF00 ;
+}
+p:nth-child(5) {
+    font-size: 22px;
+}
