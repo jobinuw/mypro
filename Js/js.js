@@ -155,3 +155,33 @@ var compare = function(choice1,choice2) {
    }        
 };
 compare(userChoice,computerChoice)
+
+// Example of a for loop:  Example of a for loop:  Example of a for loop:  Example of a for loop:
+// Example of a for loop:  Example of a for loop:  Example of a for loop:  Example of a for loop:
+
+for (var counter = 1; counter < 11; counter++) {
+	console.log(counter);
+}
+
+// We can increment up by any value by writing i += x, where x is how much we want to increment up by. e.g., i += 3 counts up by 3s.
+for (var i = 5; i < 50; i += 5) {
+	console.log(i);
+}
+for (var i = 100; i > 0; i-=5) {
+	console.log(i);
+	
+// LOOPS AND ARRAYS O LISTAS
+
+var cities = ["Melbourne", "Amman", "Helsinki", "NYC","caracas", "maracaibo", "NiuyoRk", "HongKong"];
+
+for (var i = 0; i < cities.length; i++) {
+    console.log("I would like to visit " + cities[i]);
+}
+
+// Click on "Stuck? Get a hint!" if you get stuck!
+var names = ["Jose", "Ramon", "Helsinki", "Juana","caracas"];
+
+for (var i = 0; i < names.length; i++) {
+    console.log("I know someone called" + " " + names[i]);
+}
+
