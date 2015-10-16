@@ -185,3 +185,24 @@ for (var i = 0; i < names.length; i++) {
     console.log("I know someone called" + " " + names[i]);
 }
 
+// Ejercicios de arrays y for loops
+// Ejercicios de arrays y for loops
+
+var text = "Llegando a Surinam en visita de trabajo para dinamiza\ nuestra hermandad xvideos y cooperación con el Pueblo y el\ Presidente. Po\ un Caribe Unido xvideos";
+var myName = "xvideos";
+var hits = [];
+for (var i = 0; i <text.length; i++) {
+    if (text[i]==='x') {
+        for (var j= i; j <(myName.length+i); j++) {
+	      hits.push(text[j]);
+        }
+    }	
+}
+if (hits.length===0 ) {    
+   console.log("Your name wasn't found!");
+   }
+   else {
+  console.log(hits);
+   }
+   
+   var prueba = "b".localeCompare("b")
