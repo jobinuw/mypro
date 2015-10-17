@@ -206,3 +206,63 @@ if (hits.length===0 ) {
    }
    
    var prueba = "b".localeCompare("b")
+   
+ // Otra forma de hacerlo
+   
+   var text = "Llegando a Surinam en visita de trabajo para dinamiz\ nuestra hermandad xvideos y cooperación con el Pueblo y el\ Presidente. Po uno Caribe Unido xvideos";
+var myName = "uno";
+var hits = [];
+for (var i=0; i<text.length; i++){
+    if (myName === text.substr(i,myName.length)){
+        hits.push(text.substr(i,myName.length));
+        i += myName.length;
+    }
+}
+console.log(hits)
+console.log(text.length)
+
+//WHILE LOOPS
+//WHILE LOOPS
+
+var prueba = Math.random() * 2
+console.log(prueba);
+var coinFace = Math.floor(prueba);
+console.log(coinFace);
+
+while(coinFace === 0){
+	console.log("Heads! Flipping again...");
+	var coinFace = Math.floor(Math.random() * 2);
+}
+console.log("Tails! Done flipping.");
+
+//WHILE LOOPS
+//WHILE LOOPS
+
+
+ count= 0
+
+var loop = function(){
+	while(count < 3){
+	      console.log("I'm looping!");
+	      count++
+        }
+	
+};
+
+loop();
+
+
+
+
+vari = true
+text= []
+strr= "dsfsdfsdfsdfsdfsdfsdfsdfdfssd"
+while(vari){
+	console.log("Heads! Flipping again..." + vari);
+	vari = false
+}
+
+ for (var i= 0; i <("acacaca".length); i++) {
+	      text.push(strr[i]);
+        }
+console.log(text);
