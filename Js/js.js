@@ -266,3 +266,99 @@ while(vari){
 	      text.push(strr[i]);
         }
 console.log(text);
+
+
+var loopCondition = false;
+
+//DO WHILE LOOPS
+
+do {
+	console.log("I'm gonna stop looping 'cause my condition is " + loopCondition + "!");	
+} while (loopCondition);
+
+//DRAGON SLAYER CODE
+slaying = true;
+youHit = Math.floor(Math.random()* 2);
+damageThisRound = Math.floor(Math.random()* 5+ 1);
+totalDamage= 0;
+while(slaying) {
+      if (youHit) {
+        console.log("You hit!");
+        totalDamage += damageThisRound;
+        console.log(totalDamage);
+        if (totalDamage>= 4) {
+        console.log("Reventaste al Draggy");
+        slaying = false;
+      } else {
+        youHit = Math.floor(Math.random()* 2);
+    }
+    } else {
+        console.log("You missed!");
+    }
+    slaying = false;
+}
+
+var isEven = function(number) {
+ if (number%2===0) {    
+  return(true);
+ }
+  else if(isNaN(number)) {
+   return("Eso No es un Numero...");
+   } 
+   else {
+   return(false); 
+ }
+};
+console.log(isEven("hhh"))
+
+//Switch Exercises
+
+var lunch = prompt("What do you want for lunch?","Type your lunch choice here");
+
+switch(lunch){
+  case 'sandwich':
+    console.log("Sure thing! One sandwich, coming up.");
+    break;
+  case 'soup':
+    console.log("Got it! Tomato's my favorite.");
+    break;
+  case 'salad':
+    console.log("Sounds good! How about a caesar salad?");
+    break;
+  case 'pie':
+    console.log("Pie's not a meal!");
+    break;
+  default:
+    console.log("Huh! I'm not sure what " + lunch + " is. How does a sandwich sound?");
+}
+
+//GENERAL EXPRESSION
+
+switch (/*Some expression*/) {
+    case 'option1':
+        // Do something
+        break;
+    case 'option2':
+        // Do something else
+        break;
+    case 'option3':
+        // Do a third thing
+        break;
+    default:
+       // Do yet another thing
+}
+// Miercoles 21 10
+
+// AND conditional  &&   (OR true || true;     (// => true) !  NOT  !)
+var hungry = true      ;
+var foodHere= true     ;
+var eat = function() {
+ if (hungry&&foodHere) {    
+  return(true);
+ }
+ 
+   else {
+   return(false); 
+ }
+  
+};
