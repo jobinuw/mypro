@@ -1,6 +1,7 @@
 if ("mye".length >= 7) 
 {
     console.log("Let's go down the first road!");
+	
 }
 else 
 {
@@ -362,3 +363,179 @@ var eat = function() {
  }
   
 };
+
+//OBJETOS SABADOOOOOOOOOOO
+
+var phonebookEntry = {};
+
+phonebookEntry.name = 'Oxnard Montalvo';
+phonebookEntry.number = '(555) 555-5555';
+phonebookEntry.phone = function() {
+  console.log('Calling ' + this.name + ' at ' + this.number + '...');
+};
+
+phonebookEntry.phone();
+
+var me = {
+    name: "joselote",
+    age: 99,
+    };
+    
+console.log("Great to see you," + " " + me.name+ " " + "Ya tienes"+ " " + me.age + " " + "anosss??"+ " " )
+
+
+//OTRA FORMA DE CREAR UN OBJETO
+
+
+var myObj = new Object();
+
+var myObj = new Object();
+myObj["name"] = "Charlie";
+myObj.edad = 65
+console.log(myObj.name)
+console.log(myObj.edad)
+
+git remote add origin https://github.com/jobinuw/django.git
+git push -u origin master
+
+
+
+// OBJETOS Y ARRAYS CREACION DE OBJETOS DE DOS FORMAS
+var object1 = {
+    name: "joselote",
+    age: 99,
+    };
+object1["apodo"] = "Charlie";
+object1.edad = 65
+console.log(object1.apodo)
+console.log(object1.edad)
+console.log(object1.name)
+
+
+var me = new Object();
+me["name"] = "Charlie";
+me.age = 65
+console.log(myObj.name)
+console.log(myObj.edad)
+
+
+var raptor = new Object();
+raptor["name"] = "tuki";
+raptor.age = 66
+console.log(raptor.name)
+console.log(raptor.age)
+
+
+
+var myArray = [677, false, "JavaScript",raptor, raptor.name];
+for (var i = 0; i <myArray.length; i++) {
+    console.log(myArray[i]);
+}
+
+
+// obejetos creados dentro de objetos
+
+var friends = {
+    bill: {},
+    steve: {}
+};
+
+friends[bill] = {};
+friends.steve = {};
+
+// O con el objecto constructor
+
+var friends = new Object();
+
+friends.bill = new Object();
+friends.steve = new Object();
+
+
+
+
+
+
+
+
+
+
+
+// LISTA DE CONTACTOS ARRAYS CON OBJETOS
+
+var friends = {};
+friends.bill = {
+  firstName: "Bill",
+  lastName: "Gates",
+  number: "(206) 555-5555",
+  address: ['One Microsoft Way','Redmond','WA','98052']
+};
+friends.steve = {
+  firstName: "Steve",
+  lastName: "Jobs",
+  number: "(408) 555-5555",
+  address: ['1 Infinite Loop','Cupertino','CA','95014']
+};
+
+var list = function(obj) {
+  for(var prop in obj) {
+    console.log(prop);
+  }
+};
+
+var search = function(name) {
+  for(var prop in friends) {
+    if(friends[prop].firstName === name) {
+      console.log(friends[prop]);
+      return friends[prop];
+    }
+  }
+};
+
+list(friends);
+search("Steve");
+
+// otra notacion
+
+var friends = {
+    bill: {
+        firstName: "Bill",
+        lastName: "Gates",
+        number: "(206) 555-5555",
+        address: ['One Microsoft Way','Redmond','WA','98052']
+    }
+};
+
+// PARA ITERAR DENTRO DE UN OBJETO AL ESTILO PYTHON:
+
+for (var key in object) {
+  // Access that key's value
+  // with object[key]
+}
+
+//ejemplo
+
+var list = function (Ob){
+for (var ite in friends) {
+ console.log(ite)
+}
+};
+
+
+// ejercicio de repaso
+
+
+for (var i=1; i<21; i++){
+    if (i% 3 === 0 && i% 5 === 0 ){
+       console.log("FizzBuzz")  
+       }
+    else if(i% 3 === 0) {
+	   console.log("Fizz") 
+       }
+    else if(i% 5 === 0) {
+	   console.log("Buzz") 
+       }
+    else {
+  console.log(i);
+    }
+}
+
