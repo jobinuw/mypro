@@ -539,3 +539,145 @@ for (var i=1; i<21; i++){
     }
 }
 
+//OBJETOSSSS
+
+var bicycle = new Object();
+bicycle.speed = 0;
+bicycle.gear = 1;
+bicycle.frame_material = "carbon fiber";
+
+
+// Take a look at our next example object, a dog
+var dog = {
+  species: "greyhound",
+  weight: 60,
+  age: 4
+};
+
+var species = dog["species"];
+// fill in the code to save the weight and age using bracket notation
+var weight =dog["weight"];
+var age =dog["age"];
+
+
+// Our bob object again, but made using a constructor this time 
+var bob = new Object();
+bob.name = "Bob Smith";
+bob.age = 30;
+// Here is susan1, in literal notation
+var susan1 = {
+  name: "Susan Jordan",
+  age: 24
+};
+// Make a new susan2 object, using a constructor instead
+var susan2 = new Object();
+susan2.name = "Susan Jordan";
+susan2.age = 24;
+
+// here is bob again, with his usual properties
+var bob = new Object();
+bob.name = "Bob Smith";
+bob.age = 30;
+// this time we have added a method, setAge
+bob.setAge = function (newAge){
+  bob.age = newAge;
+};
+// here we set bob's age to 40
+bob.setAge(40);
+// bob's feeling old.  Use our method to set bob's age to 20
+bob.setAge(20);
+
+// here we define our method using "this", before we even introduce bob
+var setAge = function (newAge) {
+  this.age = newAge;
+};
+// now we make bob
+var bob = new Object();
+bob.age = 30;
+// and down here we just use the method we already made
+bob.setAge = setAge;
+  
+// change bob's age to 50 here
+bob.setAge(50)
+
+
+///////////////////////////////////////////////////////////////////////////////
+
+var bob = new Object();
+bob.age = 17;
+// this time we have added a method, setAge
+bob.setAge = function (newAge){
+  bob.age = newAge;
+};
+
+bob.getYearOfBirth = function () {
+  return 2014 - bob.age;
+};
+console.log(bob.getYearOfBirth());
+console.log(bob.age);
+bob.setAge(14)
+console.log(bob.getYearOfBirth());
+
+////////////////////////////////////////////////////////////////////////////////////
+
+
+// here we define our method using "this", before we even introduce bob
+var setAge = function (newAge) {
+  this.age = newAge;
+};
+// now we make bob
+var bob = new Object();
+bob.age = 30;
+bob.setAge = setAge;
+  
+// make susan here, and first give her an age of 25
+var susan = new Object();
+susan.age = 25;
+susan.setAge = setAge;
+
+
+// here, update Susan's age to 35 using the method
+susan.setAge(35)
+console.log(susan.age)
+
+//////////////////////////////////////////////////////////
+
+var square = new Object();
+square.sideLength = 6;
+square.calcPerimeter = function() {
+  return this.sideLength * 4;
+};
+// help us define an area method here
+square.calcArea = function() {
+  return this.sideLength * this.sideLength ;
+};
+
+var p = square.calcPerimeter();
+var a = square.calcArea();
+console.log(a)
+
+//////////////////////////////////////////////////////////////
+///////CONSTRUCTOR
+
+function Person(name,age) {
+  this.name = name;
+  this.age = age;
+}
+
+// Let's make bob and susan again, using our constructor
+var bob = new Person("Bob Smith", 30);
+var susan = new Person("Susan Jordan", 25);
+// help us make george, whose name is "George Washington" and age is 275
+var george = new Person("George Washington", 275);
+
+
+
+
+
+
+
+
+
+
+
+
