@@ -726,6 +726,41 @@ rabbit1.describeMyself()
 rabbit2.describeMyself()
 rabbit3.describeMyself()
 
+////////////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////////////
+//OBJETOS CONSTRUCTORES Y  LISTAS 
+
+// Our person constructor
+function Person (name, age) {
+    this.name = name;
+    this.age = age;
+}
+
+// Now we can make an array of people
+var family = new Array();
+family[0] = new Person("alice", 40);
+family[1] = new Person("bob", 42);
+family[2] = new Person("michelle", 8);
+// add the last family member, "timmy", who is 6 years old
+family[3] = new Person("timmy", 6);
+for (var i = 0; i < family.length; i++) {
+    console.log("I would like to meet " + family[i].name +" "+ "Who has just turn" +" "+ family[i].age);
+}
+
+var size = 8;
+var contro = true;
+var board = "";
+board += " ";
+for (var y = 0; y < size; y++) {  
+   if (contro === true)
+      board += "#";
+      contro = false;
+   else
+      board += " ";
+}
+
+console.log(board);
+
 
 
 
