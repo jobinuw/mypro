@@ -1,6 +1,7 @@
 if ("mye".length >= 7) 
 {
     console.log("Let's go down the first road!");
+	
 }
 else 
 {
@@ -267,6 +268,7 @@ while(vari){
         }
 console.log(text);
 
+<<<<<<< HEAD
   }
   
 // DO WHILE LOOPS EL LOOP SE EJECUTA AUNQUE SEA UNA VEZ "Hey! Do this thing one time,
@@ -287,6 +289,38 @@ do {
 
 
 
+=======
+
+var loopCondition = false;
+
+//DO WHILE LOOPS
+
+do {
+	console.log("I'm gonna stop looping 'cause my condition is " + loopCondition + "!");	
+} while (loopCondition);
+
+//DRAGON SLAYER CODE
+slaying = true;
+youHit = Math.floor(Math.random()* 2);
+damageThisRound = Math.floor(Math.random()* 5+ 1);
+totalDamage= 0;
+while(slaying) {
+      if (youHit) {
+        console.log("You hit!");
+        totalDamage += damageThisRound;
+        console.log(totalDamage);
+        if (totalDamage>= 4) {
+        console.log("Reventaste al Draggy");
+        slaying = false;
+      } else {
+        youHit = Math.floor(Math.random()* 2);
+    }
+    } else {
+        console.log("You missed!");
+    }
+    slaying = false;
+}
+>>>>>>> 84c2cc14fa9d3910d993d1bfe876e18b4be76c97
 
 var isEven = function(number) {
  if (number%2===0) {    
@@ -386,3 +420,380 @@ console.log(myObj.edad)
 
 git remote add origin https://github.com/jobinuw/django.git
 git push -u origin master
+<<<<<<< HEAD
+=======
+
+
+
+// OBJETOS Y ARRAYS CREACION DE OBJETOS DE DOS FORMAS
+var object1 = {
+    name: "joselote",
+    age: 99,
+    };
+object1["apodo"] = "Charlie";
+object1.edad = 65
+console.log(object1.apodo)
+console.log(object1.edad)
+console.log(object1.name)
+
+
+var me = new Object();
+me["name"] = "Charlie";
+me.age = 65
+console.log(myObj.name)
+console.log(myObj.edad)
+
+
+var raptor = new Object();
+raptor["name"] = "tuki";
+raptor.age = 66
+console.log(raptor.name)
+console.log(raptor.age)
+
+
+
+var myArray = [677, false, "JavaScript",raptor, raptor.name];
+for (var i = 0; i <myArray.length; i++) {
+    console.log(myArray[i]);
+}
+
+
+// obejetos creados dentro de objetos
+
+var friends = {
+    bill: {},
+    steve: {}
+};
+
+friends[bill] = {};
+friends.steve = {};
+
+// O con el objecto constructor
+
+var friends = new Object();
+
+friends.bill = new Object();
+friends.steve = new Object();
+
+
+
+
+
+
+
+
+
+
+
+// LISTA DE CONTACTOS ARRAYS CON OBJETOS
+
+var friends = {};
+friends.bill = {
+  firstName: "Bill",
+  lastName: "Gates",
+  number: "(206) 555-5555",
+  address: ['One Microsoft Way','Redmond','WA','98052']
+};
+friends.steve = {
+  firstName: "Steve",
+  lastName: "Jobs",
+  number: "(408) 555-5555",
+  address: ['1 Infinite Loop','Cupertino','CA','95014']
+};
+
+var list = function(obj) {
+  for(var prop in obj) {
+    console.log(prop);
+  }
+};
+
+var search = function(name) {
+  for(var prop in friends) {
+    if(friends[prop].firstName === name) {
+      console.log(friends[prop]);
+      return friends[prop];
+    }
+  }
+};
+
+list(friends);
+search("Steve");
+
+// otra notacion
+
+var friends = {
+    bill: {
+        firstName: "Bill",
+        lastName: "Gates",
+        number: "(206) 555-5555",
+        address: ['One Microsoft Way','Redmond','WA','98052']
+    }
+};
+
+// PARA ITERAR DENTRO DE UN OBJETO AL ESTILO PYTHON:
+
+for (var key in object) {
+  // Access that key's value
+  // with object[key]
+}
+
+//ejemplo
+
+var list = function (Ob){
+for (var ite in friends) {
+ console.log(ite)
+}
+};
+
+
+// ejercicio de repaso
+
+
+for (var i=1; i<21; i++){
+    if (i% 3 === 0 && i% 5 === 0 ){
+       console.log("FizzBuzz")  
+       }
+    else if(i% 3 === 0) {
+	   console.log("Fizz") 
+       }
+    else if(i% 5 === 0) {
+	   console.log("Buzz") 
+       }
+    else {
+  console.log(i);
+    }
+}
+
+//OBJETOSSSS
+
+var bicycle = new Object();
+bicycle.speed = 0;
+bicycle.gear = 1;
+bicycle.frame_material = "carbon fiber";
+
+
+// Take a look at our next example object, a dog
+var dog = {
+  species: "greyhound",
+  weight: 60,
+  age: 4
+};
+
+var species = dog["species"];
+// fill in the code to save the weight and age using bracket notation
+var weight =dog["weight"];
+var age =dog["age"];
+
+
+// Our bob object again, but made using a constructor this time 
+var bob = new Object();
+bob.name = "Bob Smith";
+bob.age = 30;
+// Here is susan1, in literal notation
+var susan1 = {
+  name: "Susan Jordan",
+  age: 24
+};
+// Make a new susan2 object, using a constructor instead
+var susan2 = new Object();
+susan2.name = "Susan Jordan";
+susan2.age = 24;
+
+// here is bob again, with his usual properties
+var bob = new Object();
+bob.name = "Bob Smith";
+bob.age = 30;
+// this time we have added a method, setAge
+bob.setAge = function (newAge){
+  bob.age = newAge;
+};
+// here we set bob's age to 40
+bob.setAge(40);
+// bob's feeling old.  Use our method to set bob's age to 20
+bob.setAge(20);
+
+// here we define our method using "this", before we even introduce bob
+var setAge = function (newAge) {
+  this.age = newAge;
+};
+// now we make bob
+var bob = new Object();
+bob.age = 30;
+// and down here we just use the method we already made
+bob.setAge = setAge;
+  
+// change bob's age to 50 here
+bob.setAge(50)
+
+
+///////////////////////////////////////////////////////////////////////////////
+
+var bob = new Object();
+bob.age = 17;
+// this time we have added a method, setAge
+bob.setAge = function (newAge){
+  bob.age = newAge;
+};
+
+bob.getYearOfBirth = function () {
+  return 2014 - bob.age;
+};
+console.log(bob.getYearOfBirth());
+console.log(bob.age);
+bob.setAge(14)
+console.log(bob.getYearOfBirth());
+
+////////////////////////////////////////////////////////////////////////////////////
+
+
+// here we define our method using "this", before we even introduce bob
+var setAge = function (newAge) {
+  this.age = newAge;
+};
+// now we make bob
+var bob = new Object();
+bob.age = 30;
+bob.setAge = setAge;
+  
+// make susan here, and first give her an age of 25
+var susan = new Object();
+susan.age = 25;
+susan.setAge = setAge;
+
+
+// here, update Susan's age to 35 using the method
+susan.setAge(35)
+console.log(susan.age)
+
+//////////////////////////////////////////////////////////
+
+var square = new Object();
+square.sideLength = 6;
+square.calcPerimeter = function() {
+  return this.sideLength * 4;
+};
+// help us define an area method here
+square.calcArea = function() {
+  return this.sideLength * this.sideLength ;
+};
+
+var p = square.calcPerimeter();
+var a = square.calcArea();
+console.log(a)
+
+//////////////////////////////////////////////////////////////
+///////CONSTRUCTOR
+
+function Person(name,age) {
+  this.name = name;
+  this.age = age;
+}
+
+// Let's make bob and susan again, using our constructor
+var bob = new Person("Bob Smith", 30);
+var susan = new Person("Susan Jordan", 25);
+// help us make george, whose name is "George Washington" and age is 275
+var george = new Person("George Washington", 275);
+
+///////////////////////////////////////////////////////////////////////////////
+//EJEMPLO CONSTRUCTOR
+
+function Person(name,age) {
+  this.name = name;
+  this.age = age;
+  this.species = "Homo Sapiens";
+}
+
+var sally = new Person("Sally Bowles", 39)
+var holden = new Person("Holden Caulfield", 16)
+console.log("sally's species is " + sally.species + " and she is " + holden.age);
+console.log("holden's species is " + holden.species + " and he is " + sally.age);
+
+
+///////////////////////////////////////////////////////////////////////////////////
+FUNCIONES DENTRO DEL CONSTRUCTOR
+///////////////////////////////////////////////////////////////////////////////////
+
+function Rectangle(height, width) {
+  this.height = height;
+  this.width = width;
+  this.calcArea = function() {
+      return this.height * this.width;
+  };
+  // put our perimeter function here!
+  this.calcPerimeter = function() {
+      return ((this.height * 2)+(this.width * 2));
+  };
+}
+
+var rex = new Rectangle(7,3);
+var area = rex.calcArea();
+var perimeter = rex.calcPerimeter();
+console.log(rex)
+console.log(area)
+console.log(perimeter)
+
+///////////////////////////////////////////////////////////////////////////////////////////
+
+// MAS OBJETOS FUNCIONES Y CONSTRUCTOR
+function Rabbit(adjective) {
+    this.adjective = adjective;
+    this.describeMyself = function() {
+        console.log("I am a " + this.adjective + " rabbit");
+    };
+}
+
+// now we can easily make all of our rabbits
+var rabbit1 = new Rabbit("fluffy");
+var rabbit2= new Rabbit("happy");
+var rabbit3 = new Rabbit("sleepy");
+rabbit1.describeMyself()
+rabbit2.describeMyself()
+rabbit3.describeMyself()
+
+////////////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////////////
+//OBJETOS CONSTRUCTORES Y  LISTAS 
+
+// Our person constructor
+function Person (name, age) {
+    this.name = name;
+    this.age = age;
+}
+
+// Now we can make an array of people
+var family = new Array();
+family[0] = new Person("alice", 40);
+family[1] = new Person("bob", 42);
+family[2] = new Person("michelle", 8);
+// add the last family member, "timmy", who is 6 years old
+family[3] = new Person("timmy", 6);
+for (var i = 0; i < family.length; i++) {
+    console.log("I would like to meet " + family[i].name +" "+ "Who has just turn" +" "+ family[i].age);
+}
+
+var size = 8;
+var contro = true;
+var board = "";
+board += " ";
+for (var y = 0; y < size; y++) {  
+   if (contro === true)
+      board += "#";
+      contro = false;
+   else
+      board += " ";
+}
+
+console.log(board);
+
+
+
+
+
+
+
+
+
+
+
+>>>>>>> 84c2cc14fa9d3910d993d1bfe876e18b4be76c97
