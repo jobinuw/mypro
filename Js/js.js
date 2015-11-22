@@ -389,6 +389,22 @@ var eat = function() {
 
 //OBJETOS SABADOOOOOOOOOOO
 
+
+/////////////////////////////////
+//LITERAL NOTATION
+
+var obj = {
+property: "value",
+otherProp: 42
+};
+
+/////////////////////////////////
+//CONSTRUCTOR NOTATION
+
+var obj = new Object("value", 42);
+
+///////////////////////////////////
+
 var phonebookEntry = {};
 
 phonebookEntry.name = 'Oxnard Montalvo';
@@ -787,13 +803,147 @@ for (var y = 0; y < size; y++) {
 console.log(board);
 
 
+/////////////////////////////////////////////////////////////////////////////////////////////
+
+var bob = {
+    firstName: "Bob",
+    lastName: "Jones",
+    phoneNumber: "(650) 777-7777",
+    email: "bob.jones@example.com"
+};
+
+var mary = {
+    firstName: "Mary",
+    lastName: "Johnson",
+    phoneNumber: "(650) 888-8888",
+    email: "mary.johnson@example.com"
+};
+
+var contacts = [bob, mary];
+
+function printPerson(person) {
+    console.log(person.firstName + " " + person.lastName);
+}
+function list() {
+   var contactsLength = contacts.length
+    for (var i = 0; i <contactsLength; i++) {
+    printPerson(contacts[i])
+    };
+}
+list()
+
+////////////////////////////////////////////////////////////////////////////////////////////////////
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+var bob = {
+    firstName: "Bob",
+    lastName: "Jones",
+    phoneNumber: "(650) 777-7777",
+    email: "bob.jones@example.com"
+};
+
+var mary = {
+    firstName: "Mary",
+    lastName: "Json",
+    phoneNumber: "(650) 888-8888",
+    email: "mary.johnson@example.com"
+};
+
+var xxx = {
+    firstName: "xxry",
+    lastName: "xxx",
+    phoneNumber: "(650) 888-8888",
+    email: "mxxxry.johnson@example.com"
+};
+var contacts = [bob,mary,xxx];
+
+function printPerson(person) {
+    console.log(person.firstName + " " + person.lastName);
+}
+
+function list() {
+	var contactsLength = contacts.length;
+	for (var i = 0; i < contactsLength; i++) {
+		printPerson(contacts[i]);
+	}
+}
+
+function search(lastName) {
+	var contactsLength = contacts.length;
+     	for (var i = 0; i < contactsLength; i++) {
+		if (contacts[i].lastName===lastName) {    
+          printPerson(contacts[i]);
+          break;
+         }
+ 
+        else {
+         continue; 
+         }
+	
+	}
+
+}
+
+function add(firstName,lastName,email,phoneNumber) {
+	contacts[contacts.length] = {
+    firstName: firstName,
+    lastName: lastName,
+    phoneNumber: phoneNumber,
+    email: email
+};
+}
+
+add("jose","mellado","jmmn84@gmail.com",6779845);
+list();
+search("Jones")
+
+///////////////////////////////////////////////////////////////////////////////////////////
 
 
+var james = {
+    job: "programmer",
+    married: false,
+    speak: function(para) {
+     console.log("Hello, I am feeling" + " " + para)   
+    }
+};
 
-
-
-
+james.speak("great");
+james.speak("just okay");
 
 
 
 >>>>>>> 84c2cc14fa9d3910d993d1bfe876e18b4be76c97
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////
+// typeof y hasOwnproperty el primero dice que tipo de estructura es, number, string or object y el segundo devuelve
+// true or false dependiendo si tiene o no dicha property
+var myObj = {
+    name:"jose"
+    
+};
+
+console.log( myObj.hasOwnProperty('name') ); // should print true
+console.log( myObj.hasOwnProperty('nickname') ); // should print false
+console.log( typeof anObj ); // should print "object"
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+var suitcase = {
+    shirt: "Hawaiian"
+};
+
+
+if(suitcase.hasOwnProperty('shorts')) {
+      console.log(suitcase.shorts);
+    }
+else {
+       suitcase["shorts"]= "xxx"
+       console.log(suitcase.shorts);
+ }
+
+ ///////////////////////////////////////////////////////////////////////////////////////////////////////////
+ 
