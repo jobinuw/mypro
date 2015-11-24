@@ -901,49 +901,8 @@ search("Jones")
 ///////////////////////////////////////////////////////////////////////////////////////////
 
 
-var james = {
-    job: "programmer",
-    married: false,
-    speak: function(para) {
-     console.log("Hello, I am feeling" + " " + para)   
-    }
-};
 
-james.speak("great");
-james.speak("just okay");
 
 
 
 >>>>>>> 84c2cc14fa9d3910d993d1bfe876e18b4be76c97
-
-///////////////////////////////////////////////////////////////////////////////////////////////////////
-// typeof y hasOwnproperty el primero dice que tipo de estructura es, number, string or object y el segundo devuelve
-// true or false dependiendo si tiene o no dicha property
-var myObj = {
-    name:"jose"
-    
-};
-
-console.log( myObj.hasOwnProperty('name') ); // should print true
-console.log( myObj.hasOwnProperty('nickname') ); // should print false
-console.log( typeof anObj ); // should print "object"
-
-///////////////////////////////////////////////////////////////////////////////////////////////////////////
-
-
-
-var suitcase = {
-    shirt: "Hawaiian"
-};
-
-
-if(suitcase.hasOwnProperty('shorts')) {
-      console.log(suitcase.shorts);
-    }
-else {
-       suitcase["shorts"]= "xxx"
-       console.log(suitcase.shorts);
- }
-
- ///////////////////////////////////////////////////////////////////////////////////////////////////////////
- 
