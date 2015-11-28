@@ -4,6 +4,18 @@ localmente entonces se debe usar estos comandos:
 git fetch origin
 git branch --track newLocalBranch remoteName/remoteBranch
 
+o tambien:
+
+git checkout -b newLocalBranch origin/remoteBranch
+(esta crea la rama local nueva y de una vez te cambia a esa rama)
+
+o tambien:
+
+si el nomre de la rama remota es exacto y si no tenemos otra que se llame igual localmente
+podemos de una vez cambiarnos a esta rama nueva con:
+
+git checkout newlocalBranch
+
 asi tendremos una copia de la rama de arriba aca localmente. 
 
 luego de tenerla local se puede integrar a master local con un merge o un rebase.
@@ -11,7 +23,7 @@ luego de tenerla local se puede integrar a master local con un merge o un rebase
 si hay cambios en el repositorio de origen y quieres subir los cambios que hicistes localmente
 no se va a poder al menos que primeros bajes del repositorio origen (el trabajo que otro adelanto)
 con git fetch origin
-y luego lo integres a tu trabajo con git merge desde la rama en cuestion, normalmente la master
+y luego lo integres a tu trabajo con git merge desde la rama en cuestion, (normalmente la master)
 
 git merge 
 
@@ -44,4 +56,14 @@ git push origin nombreBranch
 
 para cambiarle el nombre a un branch debes pararte en la rama y colocar:
  git branch -m newName
+
+ 
+ para que una rama local apunte a otra rama remota (suponiendo que quieras hacerle tracking a otra rama arriba)
+ pararse en la rama local y poner:
+ 
+ $ git branch -u origin/ramaremota
+ 
+ con este comando se puede ver cuales ramas locales estan haciendo tracking a cuales remotas:
+ 
+ git branch -vv
 
