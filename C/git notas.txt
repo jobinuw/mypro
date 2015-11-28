@@ -1,0 +1,44 @@
+si arriba en el repo de origin crea otra persona una branch nueva y tu le quieres hacer seguimiento 
+localmente entonces se debe usar estos comandos:
+
+git fetch origin
+git branch --track newLocalBranch remoteName/remoteBranch
+
+asi tendremos una copia de la rama de arriba aca localmente. 
+
+luego de tenerla local se puede integrar a master local con un merge o un rebase.
+
+si hay cambios en el repositorio de origen y quieres subir los cambios que hicistes localmente
+no se va a poder al menos que primeros bajes del repositorio origen (el trabajo que otro adelanto)
+con git fetch origin
+y luego lo integres a tu trabajo con git merge desde la rama en cuestion, normalmente la master
+
+git merge 
+
+o tambien se puede bajar lo que haya sido actualizado arriba con un 
+
+git checkout master
+git pull --rebase origin
+
+se trae lo que este nuevo en el repositorio origen (que otros han hecho) y le monta lo que tu actualmente editaste localmente
+y no se crea un merge commit sino otro commit en la misma linea de flujo, este nuevo commit no tiene 
+2 padres sino uno solo, se ve la linea de flujo mas limpia a que si se hace el merge commit con git merge.
+
+luego de hacer rebase y/o commit se procede a subir todo al repo origin con un git push.
+
+para borrar un branch remota (en origin)
+git push origin --delete branchName
+
+pra borrarla localmente es 
+
+git branch -D branchName
+
+es importante usar el comando
+git fetch origin
+ya que este actualiza nuestro repositorio local con respecto al origin repository
+
+para crear una branch nueva localmente y luego reflejarla en rel repositorio origin:
+
+git branch nombreBranch
+git push origin nombreBranch
+
