@@ -42,3 +42,6 @@ para crear una branch nueva localmente y luego reflejarla en rel repositorio ori
 git branch nombreBranch
 git push origin nombreBranch
 
+para cambiarle el nombre a un branch debes pararte en la rama y colocar:
+ git branch -m newName
+
