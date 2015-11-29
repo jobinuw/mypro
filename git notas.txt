@@ -70,4 +70,37 @@ con este comando se puede ver cuales ramas locales estan haciendo tracking a cua
 para ver el history de los commits de una manera compacta y resumida:
  	git log --oneline
 
-	xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+5fa3923 notas de git agregadas
+7ba8d3a notas git agregadas al directorio
+dc261e9 resulto
+a33f486 merge
+f908859 Update hhh.html
+8849ac5 rebase2
+f61b2fd Update hhh.html
+d927a1b Update hhh.html
+
+Si quiero moverme a un commit especifico en la linea de tiempo para ver un snapshot especifico 
+(como lucian los archivos en un instante especifico) debo primero darle git log, ubicar el numero de commit
+al cual me quiero mover y luego darle el comando 
+	git checkout xxyyzz (numero de commit)
+al hacer esto quedamos en un estado detach HEAD es decir que nuestro head no esta apuntando al top de nuestra branch
+si no que esta apuntando a otro commit anterior
+
+jmellado@mbo-hi-04 MINGW64 /c/mypro (master)
+$ git checkout dc261e9
+Note: checking out 'dc261e9'.
+
+You are in 'detached HEAD' state. You can look around, make experimental
+changes and commit them, and you can discard any commits you make in this
+state without impacting any branches by performing another checkout.
+
+If you want to create a new branch to retain commits you create, you may
+do so (now or later) by using -b with the checkout command again. Example:
+
+  git checkout -b <new-branch-name>
+
+HEAD is now at dc261e9... resulto
+
+jmellado@mbo-hi-04 MINGW64 /c/mypro ((dc261e9...))
+$
+
