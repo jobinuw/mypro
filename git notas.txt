@@ -107,3 +107,61 @@ HEAD is now at dc261e9... resulto
 jmellado@mbo-hi-04 MINGW64 /c/mypro ((dc261e9...))
 $
 
+=================================================================================
+
+si se acaba de hacer un commit y se quiere echar para atras ese mismo commit se debe hacer con revert HEAD
+esto lo que hace es crear un nuevo commit para dejar el archivo como estaba antes del cambio que estamos revirtiendo
+a-b-c  en este caso c queda igual que a, pero el commit b que es el que estamos revirtiendo, igual queda en la rama.
+no se borra el commit sino q se crea uno nuevo donde no aparecen los cambios hechos.
+
+# Commit a snapshot
+git commit -m "Make some changes that will be undone"
+
+# Revert the commit we just created
+git revert HEAD
+
+si aparece el editor VIM debemos editar el mensaje del commit, para esto le damos i o a, editamos y luego
+nos salimos de esa pantalla con :wq    con ESC pasamos al modo control y con i o a podemos editar.
+si no se han realizado cambios le damos :q y luego ENTER para salirnos.
+
+http://tldp.org/LDP/intro-linux/html/sect_06_02.html para ver mas comandos de VIM
+
+
+=======================================================================================
+para sacar un archivo de la Stage Area, es decir antes de hacerle commit.
+	git reset 
+
+# Edit both hello.py and main.py
+
+# Stage everything in the current directory
+git add .
+
+# Realize that the changes in hello.py and main.py
+# should be committed in different snapshots
+
+# Unstage main.py
+git reset main.py
+
+# Commit only hello.py
+git commit -m "Make some changes to hello.py"
+
+# Commit main.py in a separate snapshot
+git add main.py
+git commit -m "Edit main.py"
+
+====================================================================================================
+
+para borrar definitivamente varios commit
+# Create a new file called `foo.py` and add some code to it
+
+# Commit it to the project history
+git add foo.py
+git commit -m "Start developing a crazy feature"
+
+# Edit `foo.py` again and change some other tracked files, too
+
+# Commit another snapshot
+git commit -a -m "Continue my crazy feature"
+
+# Decide to scrap the feature and remove the associated commits
+git reset --hard HEAD~2
