@@ -70,3 +70,4 @@ con este comando se puede ver cuales ramas locales estan haciendo tracking a cua
 para ver el history de los commits de una manera compacta y resumida:
  	git log --oneline
 
+	xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
