@@ -70,37 +70,3 @@ con este comando se puede ver cuales ramas locales estan haciendo tracking a cua
 para ver el history de los commits de una manera compacta y resumida:
  	git log --oneline
 
-	 git log --oneline
-cc8d98f actualizado notas git
-5fa3923 notas de git agregadas
-7ba8d3a notas git agregadas al directorio
-dc261e9 resulto
-a33f486 merge
-f908859 Update hhh.html
-8849ac5 rebase2
-f61b2fd Update hhh.html
-d927a1b Update hhh.html
-2dce33a Update hhh.html
-f32be4f uno
-7ae3bf2 ya
-
-con el comando git checkout xxyyzz (commit sha o numer) podemos pararnos especificamente en como lucia el directorio 
-en un momento de la historia dada. en el ejemplo podemos ver como lucia el directorio para cuando hicimos el snapshot f32be4f
-esto nos coloca n un detach HEAD ya que no estamos en la cabeza de la rama sino que echamos hacia atras
-jmellado@mbo-hi-04 MINGW64 /c/mypro (master)
-$ git checkout f32be4f
-Note: checking out 'f32be4f'.
-
-You are in 'detached HEAD' state. You can look around, make experimental
-changes and commit them, and you can discard any commits you make in this
-state without impacting any branches by performing another checkout.
-
-
-HEAD is now at f32be4f... uno
-
-jmellado@mbo-hi-04 MINGW64 /c/mypro ((f32be4f...))
-$ git checkout 2dce33a
-Previous HEAD position was f32be4f... uno
-HEAD is now at 2dce33a... Update hhh.html
-
-
