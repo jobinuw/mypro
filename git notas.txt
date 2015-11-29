@@ -1,3 +1,6 @@
+useful command para ver graficamente como van las ramas y los commit
+	git log --pretty=format:"%h %s" --graph
+
 si arriba en el repo de origin crea otra persona una branch nueva y tu le quieres hacer seguimiento 
 localmente entonces se debe usar estos comandos:
 
