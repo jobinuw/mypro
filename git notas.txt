@@ -179,8 +179,34 @@ git reset --hard HEAD~2
 	$ git log --oneline
 	5797122 act notas git
 	a8fe482 agregado useful command al inicio
-	
-	
-	
+
+===========================================================================================================	
+git clean -n    antes de remover muestra cuales son. This will show you which files are going to be removed without actually doing it.
+git clean -f    remueve cualquier untracked file que se haya añadido al directorio	
+git clean -df   Remove untracked files and untracked directories from the current directory.
+
+===============================================================================================================
+
+The primary reason for rebasing is to maintain a linear project history. 
+rebasing is like saying, “I want to base my changes on what everybody has already done.”
+rebase continua la misma linea de la rama que se esta rebasando y coloca nuestro trabaja q es en otra rama sobre la master
+y deja una sola linea de flujo.
+
+comienzo una rama nueva y trabajo en ella:
+
+	# Start a new feature
+	git checkout -b new-feature master
+	# Edit files
+	git commit -a -m "Start developing a feature"
+
+estando en la rama feature, desde alli rebaso a la master, q es la rama base **git rebase <base>**
+	git checkout new-feature
+	git rebase master
+
+luego de hacer esto queda master/head detras de la punta de la nueva master, o sea hay que hacer
+un fast-forward merge para dejar el HEAD en la punta de la rama master. y q no quede detras.
+	git checkout master
+	git merge new-feature
+ 
 	
 
