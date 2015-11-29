@@ -165,3 +165,22 @@ git commit -a -m "Continue my crazy feature"
 
 # Decide to scrap the feature and remove the associated commits
 git reset --hard HEAD~2
+
+>>>>antes del git reset --hard
+	$ git log --oneline
+	dc4e0d9 ABCD
+	51a06a3 AB
+	5797122 act notas git
+>>>>despues del reset
+	$ git reset --hard HEAD~2
+	HEAD is now at 5797122 act notas git
+
+	
+	$ git log --oneline
+	5797122 act notas git
+	a8fe482 agregado useful command al inicio
+	
+	
+	
+	
+
