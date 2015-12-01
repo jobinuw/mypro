@@ -207,6 +207,40 @@ luego de hacer esto queda master/head detras de la punta de la nueva master, o s
 un fast-forward merge para dejar el HEAD en la punta de la rama master. y q no quede detras.
 	git checkout master
 	git merge new-feature
- 
 	
+======================================================================================================================
+git rebase -i master
+i de interactive lo que hace es permitir editar cada commit que se esta rebasando en la rama master, permitiendo hasta
+fusionar los commits para que la rama master luzca mas limpia. a diferencia del rebase normal que por ejemplo si la feature branch
+lleva 4 commit el rebase los pasa todos a la rama master. con rebase i tenemos control de cuales commit quedaran definitivos
+en la master.
+
+# Start a new feature
+git checkout -b new-feature master
+# Edit files
+git commit -a -m "Start developing a feature"
+# Edit more files
+git commit -a -m "Fix something from the previous commit"
+
+# Add a commit directly to master
+git checkout master
+# Edit files
+git commit -a -m "Fix security hole"
+
+# Begin an interactive rebasing session
+git checkout new-feature
+git rebase -i master
+
+
+pick 32618c4 Start developing a feature
+pick 62eed47 Fix something from the previous commit
+
+pick 32618c4 Start developing a feature
+squash 62eed47 Fix something from the previous commit      este commit desaparece cuando rebase en master.
+
+ git rebase -i HEAD~4   los ultimos 4 commits
+
+================================================================================================================================
+
+
 
