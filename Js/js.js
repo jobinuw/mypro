@@ -1,3 +1,4 @@
+
 if ("mye".length >= 7) 
 {
     console.log("Let's go down the first road!");
@@ -899,6 +900,86 @@ list();
 search("Jones")
 
 ///////////////////////////////////////////////////////////////////////////////////////////
+
+// NOTAS FINALES SOBRE COMO ITERAR LOS OBJETOS Y SUS POPIEDADES.
+var dog = {
+species: "bulldog",
+age: 3,
+color: brown
+};
+
+dog.species = dog["species"] = "bulldog";
+
+And if we say:
+
+var x = "species";
+
+then
+
+dog[x] = "bulldog";
+
+==============================================================
+var nyc = {
+    fullName: "New York City",
+    mayor: "Bill de Blasio",
+    population: 8000000,
+    boroughs: 5
+};
+
+// write a for-in loop to print the value of nyc's properties
+for(var pro in nyc) {
+  console.log(nyc[pro]);
+}
+=========================================================================
+
+function Dog (breed) {
+  this.breed = breed;
+  this.bark = function() {
+  console.log("Woofss");
+};
+}
+
+// here we make buddy and teach him how to bark
+var buddy = new Dog("Golden Retriever");
+
+
+buddy.bark();
+
+// here we make snoopy
+var snoopy = new Dog("Beagle");
+// we need you to teach snoopy how to bark here
+snoopy.bark = function() {
+  console.log("Woofss");
+};
+// this causes an error, because snoopy doesn't know how to bark!
+snoopy.bark();
+
+===============================================================
+// Aca con el 
+//className.prototype.newMethod = function() {
+//statements;
+//};
+// se esta entrando en el prototype de la calse y se esta agregando un nuevo metodo para que los perros puedan
+//ladrar...
+
+function Dog (breed) {
+  this.breed = breed;
+};
+
+// here we make buddy and teach him how to bark
+var buddy = new Dog("golden Retriever");
+Dog.prototype.bark = function() {
+  console.log("Woof");
+};
+buddy.bark();
+
+// here we make snoopy
+var snoopy = new Dog("Beagle");
+/// this time it works!
+snoopy.bark();
+=====================================================================================
+
+
 
 
 
